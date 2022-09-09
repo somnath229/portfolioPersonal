@@ -13,6 +13,7 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
+    "build": "nodemon app.js",
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
