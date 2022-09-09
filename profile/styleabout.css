@@ -1,0 +1,76 @@
+
+.skilledit{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+.skill{
+    margin: 0 1rem;
+    width: 90%;
+    height: 25rem;
+    background-color: red;
+
+}
+
+
+.subject{
+width: 50%;
+    /* padding-right: 2rem; */
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 50%;
+    background: #365f4c;
+    /* padding-left: 2rem; */
+
+}
+.container .box{
+    position: relative;
+    /* width: 100%; */
+    height: 2rem;
+    /* background-color: red; */
+    cursor: pointer;
+    /* box-shadow: 10px 10px 10px gray; */
+}
+.container .box::before{
+    content: '';
+    position: absolute;
+    width: .5rem;
+    height: 100%;
+    background: var(--clr);
+    transition: 0.5s ease-in-out;
+}
+.per{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.container .box:hover:before {
+    width: 70%;
+}
+
+.about .parap{
+    font-size: 1.5rem;
+    padding: 1rem;
+    /* list-style: none; */
+}
+.data{
+    font-size: 2rem;
+    color: #365f4c;
+}
+
+
+@media (max-width:1100px){
+    .about p{
+        font-size: .5rem;
+    }
+    .about h1{
+        margin: 0;
+    }
+
+} 

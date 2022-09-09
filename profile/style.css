@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Baloo+Paaji+2:wght@600&family=Roboto:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    /* text-transform: uppercase; */
+    /* text-transform: capitalize; */
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2',cursive;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: linear-gradient(white,rgb(197, 179, 179));
+    width:100%;
+    height: 100%;
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    width: 5rem;
+    height: 5rem;
+    /* background-color: whitesmoke; */
+    animation: animate 1s linear infinite;
+}
+.loader span{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    /* background: blue; */
+}
+.loader span:nth-child(1){
+    top: 0;
+    left: 0;
+    background:var(--mihir);
+    animation: rotate 1s linear infinite;
+}
+.loader span:nth-child(2){
+    top: 0;
+    right: 0;
+    background:var(--mihir);
+    animation: rotate 1s linear infinite;
+
+}
+.loader span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    background:var(--mihir);
+    animation: rotate 1s linear infinite;
+
+}
+.loader span:nth-child(4){
+    bottom: 0;
+    right: 0;
+    background:var(--mihir);
+    animation: rotate 1s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        width: 5rem;
+        height: 5rem;
+    }
+    10%{
+        width: 5rem;
+        height: 5rem;
+    }
+    50%{
+        width: 7rem;
+        height: 7rem;
+    }
+    90%{
+        width: 5rem;
+        height: 5rem;
+    }
+    100%{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(0deg);
+
+    }
+    50%{
+        transform: rotate(90deg);
+
+    }
+    90%{
+        transform: rotate(90deg);
+
+    }
+    100%{
+        transform: rotate(90deg);
+
+    }
+}
+.margin{
+    margin:0 1rem;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    /* background-color: yellow; */
+}
+.navbar{
+    background-color: #365f4c;
+    width: 10%;
+    height: 40rem;
+    /* transition: transform 0.3s ease-in; */
+}
+.navbar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.navbar li{
+    list-style: none;
+    padding: 1.3rem 2rem;
+    width: 100%;
+}
+.navbar li .fa-solid , .fa-brands{
+    margin-right: 1rem;
+}
+/* li:hover{
+    cursor: pointer; 
+    background-color: rgb(167, 160, 160);
+
+} */
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+a:hover{
+    color: rgb(202, 202, 202);
+}
+
+.subheader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    height: 5rem;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 40rem;
+    width: 100%;
+    color: black;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.info{
+    padding-left: 2.5rem;
+}
+.hello{
+    font-size: 1.8rem;
+}
+.name{
+    font-family: 'Baloo Paaji 2',cursive;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.desig{
+    padding-bottom: .5rem;
+}
+.about{
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+.btn{
+    background: none;
+    color: black;
+    padding: .2rem 1rem;
+    border: 2px solid black;
+    border-radius: .4rem;
+    font-weight: bold;
+}
+.btn:hover{
+    cursor: pointer;
+    /* background-color: #365f4c60 ; */
+    box-shadow: 4px 5px 10px #365f4c;
+
+}
+
+
+.hamburger{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    left: 2rem;
+}
+.ham img{
+    height: 4rem;
+    display: none;
+}
+.cross img{
+    display: none;
+    height: 2rem;
+    margin-left: 8rem;
+}
+
+.para {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18rem;
+}
+.para .p {
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    text-shadow: 0 10px 10px whitesmoke;
+}
+.para .p span{
+    position: relative;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 10px 0 0 #365f4c;
+    overflow: hidden;
+    animation: textTyping 4s steps(6) infinite;
+}
+ 
+@keyframes textTyping{
+    0%,90%,100%{
+        width: 1px;
+    }
+    30%,60%{
+        width:100px ;
+    }
+}
+
+.projectSlide{
+    display: flex;
+    height: 40rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.projectSlide h1{
+    font-size: 2.5rem;
+    height: 10rem;
+    text-decoration: underline;
+}
+.ProjectName a{
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+ 
+.navigate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigate .img img{
+    height: 8rem;
+    padding-bottom: 1rem;
+}
+.prev{
+    margin-right: 35rem;
+}
+.next{
+    margin-left: 35rem;
+}
+.prev , .next{
+    cursor: pointer;
+    font-size: 4rem;
+    padding:0 1.5rem;
+    font-weight: bold;
+}
+
+.text{
+    margin-top: .5rem;
+}
+.number{
+    font-size: 1.4rem;
+    margin-top: 1rem ;
+}
+.prev:hover , .next:hover{
+    background-color: rgba(233, 225, 225, 0.822);
+    color: black;
+}
+.dots{
+    margin: 1rem;
+    padding: .5rem;
+    background-color: gray;
+    display: inline-block;
+    border-radius: 1rem;
+}
+.active , .dots:hover {
+    background-color: black;
+}
+.about{
+    height: 100%;
+}
+.aboutThis{
+    height: 42rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 6rem;
+    font-size: 1.2rem;
+}
+.aboutThis h1{
+    padding-left: 15rem;
+    padding-right: 12rem;
+    padding-bottom: 1rem;
+    text-decoration: underline;
+}
+.aboutThis p{
+    padding-left: 15rem;
+    padding-right: 12rem;
+}
+.skillrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.skillT{
+    padding-left: 18rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+}
+.skilleT{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;    
+}
+ 
+.eTname{
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+.boxeT{
+    font-size: .6rem;
+    /* border: 1px solid black; */
+    padding-right: 3rem;
+
+    width: 100%;
+    background-color: rgb(182, 182, 182);
+}
+.pereT{
+    padding-right: 30rem;
+    background-color: black;
+    width: 90%;
+}
+
+
+.largeL{
+    color: black;
+    float: left;
+    font-size:4.5rem;
+    font-weight: 600;
+    height: 40px;
+    line-height: 50px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.footer{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    height: 15rem;    
+    padding:4rem ;
+    color: white;
+}
+.copy{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.copy img{
+    height: 4rem;
+    border-radius: 4rem;
+    padding-right: .5rem;
+}
+.vertical {
+    height: 2rem;
+    border-left:3px solid gray;
+    position: relative;
+}
+.text-ms{
+    color: black;
+    font-size: 1.4rem;
+    padding-right: 1rem;
+}
+.text-sm{
+    padding-left: 1rem;
+    color: gray;
+
+}
+.social{
+    text-align: end;
+    width: 50%;
+}
+.social a{
+    color: black;
+    padding:0 .5rem;
+}
+.social a:hover{
+    color: gray;
+}
+
+
+@media(max-width:1600px){
+    .navbar{
+        width: 14%;
+    }
+   .navbar ul{
+       margin-left: -1rem;
+   }
+   .sidego{
+    transform: translate(-180rem , 0);
+    position: absolute;
+    }
+    .ham img{
+        display: block;
+    }
+    .cross img{
+        display: block;
+    }
+
+    .main{
+        padding:0 2rem;
+    }   
+    .prev{
+        margin-right: 15rem;
+    }
+    .next{
+        margin-left: 15rem;
+    }
+    .aboutThis{
+        height: 44rem;
+    }
+    .skillT {
+        padding-left: 116px;
+        padding-right: 1rem;
+        padding-top: 4rem;
+    }
+    .aboutThis p {
+        padding-left: 5rem;
+        padding-right: 3rem;
+    }
+    .aboutThis h1 {
+        padding-left: 5rem;
+        padding-right: 12rem;
+        padding-bottom: 1rem;
+    }
+    .pereT{
+        padding-right: 16rem;
+    }
+}

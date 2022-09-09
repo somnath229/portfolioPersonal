@@ -1,0 +1,45 @@
+.navbar{
+    height: 43.7rem;
+}
+.header{
+    margin-bottom: 2rem;
+}
+.form{
+    width: 100%;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.contact-form h1{
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+.contact-form .button{
+    background-color: rgba(0, 0, 255, 0.829);
+    color: white;
+    cursor: pointer;
+}
+.contact-form .button:hover{
+    background-color:rgba(0, 0, 255, 0.7);
+    
+}
+
+.input{
+    padding: .8rem;
+    margin: .5rem;
+    border-radius: 6px;
+    width: 70%;
+    background: rgb(224, 222, 210);
+    border: none;
+    font-size: medium;
+}
+
